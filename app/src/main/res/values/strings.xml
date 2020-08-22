@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SharedPrefExample</string>
+    <string name="name">Name</string>
+    <string name="save_and_go_to_next_activity">Save and Go to next activity</string>
+    <string name="user_name">User Name</string>
+    <string name="settings">Settings</string>
+</resources>
