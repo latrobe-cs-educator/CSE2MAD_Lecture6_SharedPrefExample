@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedpreferences;
     private Boolean syncBool = false;
     private String TAG = "MainAct";
-    private Button saveBtn;
+    private Button saveBtn, goBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +33,23 @@ public class MainActivity extends AppCompatActivity {
         //Create or access share preference file
         sharedpreferences = getSharedPreferences(MyPREFERENCES, MODE_PRIVATE);
 
-        //Textview
         nameTV = (TextView) findViewById(R.id.nameTV);
         sw = (Switch) findViewById(R.id.syncPic);
         saveBtn = (Button) findViewById(R.id.saveBtn);
+        goBtn = (Button) findViewById(R.id.otherBtn);
 
-        //Button
+        //Save Listener
         saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSave(view);
+                Intent intent = new Intent(getApplicationContext(), OtherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //GoTo Listener
+        goBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendSave(view);

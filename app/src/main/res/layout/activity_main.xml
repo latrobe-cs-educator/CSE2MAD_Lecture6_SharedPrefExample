@@ -26,7 +26,8 @@
             android:id="@+id/syncPic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sync Photos" />
+            android:text="Sync Photos"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         <TextView
             android:id="@+id/textView3"
@@ -47,7 +48,13 @@
             android:id="@+id/saveBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save_and_go_to_next_activity" />
+            android:text="Save settings" />
+
+        <Button
+            android:id="@+id/otherBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Other Activity" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
